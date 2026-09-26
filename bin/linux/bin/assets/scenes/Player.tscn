@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=2]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_player"]
+size = Vector2(24, 32)
+
+[node name="Player" type="KinematicBody2D"]
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+animation = "idle_down"
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_player")

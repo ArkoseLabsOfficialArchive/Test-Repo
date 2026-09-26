@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+    <app title="hxGDFL" file="ArkoseLabsLibraries" main="Main" version="1.0.0" company="ArkoseLabs" />
+    <window width="1280" height="720" fps="60" background="#111111" hardware="true" vsync="false" />
+
+    <haxedef name="openfl_dpi_aware" />
+
+    <haxelib name="openfl" />
+    <haxelib name="hxscript" />
+    <haxedef name="hxscript_host" value="godot" />
+
+    <source path="src" />
+    <assets path="assets" />
+
+    <define name="MainScene" value="backstory_16" />
+    <define name="custom_font" value="_sans" />
+
+    <haxedef name="lime_use_old_deltatime" unless="html5"/>
+	<haxedef name="lime_disable_motion_sensors" unless="html5"/>
+</project>

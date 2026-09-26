@@ -1,0 +1,16 @@
+[gd_scene load_steps=1 format=2]
+
+[node name="HUD" type="Control"]
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+value = 100.0
+
+[node name="DialogueBox" type="Panel" parent="."]
+
+[node name="PauseMenu" type="VBoxContainer" parent="."]
+
+[node name="ResumeButton" type="Button" parent="PauseMenu"]
+text = "Resume"
+
+[node name="QuitButton" type="Button" parent="PauseMenu"]
+text = "Quit"

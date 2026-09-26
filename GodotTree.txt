@@ -1,0 +1,160 @@
+GODOT 3 ENGINE ARCHITECTURE & CLASS HIERARCHY
+│
+├── Built-in Types
+│   │
+│   ├── Vector2
+│   ├── Vector3
+│   ├── Rect2
+│   ├── Transform2D
+│   ├── Transform
+│   ├── Plane
+│   ├── Quat
+│   ├── Basis
+│   ├── AABB
+│   ├── Color
+│   ├── NodePath
+│   ├── RID
+│   ├── Dictionary
+│   ├── Array
+│   ├── PoolByteArray
+│   ├── PoolIntArray
+│   ├── PoolRealArray
+│   ├── PoolStringArray
+│   ├── PoolVector2Array
+│   ├── PoolVector3Array
+│   └── PoolColorArray
+│
+├── Engine Runtime
+│   │
+│   ├── MainLoop
+│   │
+│   ├── SceneTree
+│   │   │
+│   │   └── Root Viewport
+│   │       │
+│   │       └── Main : Node2D
+│   │           ├── TileMap
+│   │           ├── Player : KinematicBody2D
+│   │           ├── Enemy : KinematicBody2D
+│   │           ├── NPC : Node2D
+│   │           ├── Camera2D
+│   │           └── HUD : Control
+│   │
+│   ├── Input
+│   ├── Physics2DServer
+│   ├── AudioServer
+│   ├── VisualServer
+│   └── ProjectSettings
+│
+└── Object
+    │
+    ├── Reference
+    │   │
+    │   └── Resource
+    │       │
+    │       ├── PackedScene
+    │       │
+    │       ├── Script
+    │       │   ├── GDScript
+    │       │   ├── CSharpScript
+    │       │   └── VisualScript
+    │       │
+    │       ├── Texture
+    │       │   ├── ImageTexture
+    │       │   ├── StreamTexture
+    │       │   ├── AtlasTexture
+    │       │   ├── GradientTexture
+    │       │   ├── GradientTexture2D
+    │       │   ├── CurveTexture
+    │       │   └── AnimatedTexture
+    │       │
+    │       ├── Shape2D
+    │       │   ├── CircleShape2D
+    │       │   ├── RectangleShape2D
+    │       │   ├── CapsuleShape2D
+    │       │   ├── ConvexPolygonShape2D
+    │       │   ├── ConcavePolygonShape2D
+    │       │   └── SegmentShape2D
+    │       │
+    │       ├── SpriteFrames
+    │       │
+    │       ├── AudioStream
+    │       │   ├── AudioStreamOGGVorbis
+    │       │   ├── AudioStreamMP3
+    │       │   └── AudioStreamRandomPitch
+    │       │
+    │       └── Font
+    │           ├── BitmapFont
+    │           └── DynamicFont
+    │
+    ├── InputEvent
+    │   ├── InputEventKey
+    │   ├── InputEventMouse
+    │   │   ├── InputEventMouseButton
+    │   │   └── InputEventMouseMotion
+    │   ├── InputEventJoypad
+    │   │   ├── InputEventJoypadButton
+    │   │   └── InputEventJoypadMotion
+    │   ├── InputEventScreenTouch
+    │   ├── InputEventScreenDrag
+    │   └── InputEventAction
+    │
+    └── Node
+        │
+        ├── Viewport
+        │
+        ├── CanvasItem
+        │   │
+        │   ├── Node2D
+        │   │   │
+        │   │   ├── Sprite
+        │   │   ├── AnimatedSprite
+        │   │   ├── TileMap
+        │   │   ├── Polygon2D
+        │   │   ├── Line2D
+        │   │   ├── Camera2D
+        │   │   ├── Position2D
+        │   │   │
+        │   │   ├── CollisionObject2D
+        │   │   │   │
+        │   │   │   ├── PhysicsBody2D
+        │   │   │   │   ├── StaticBody2D
+        │   │   │   │   ├── KinematicBody2D
+        │   │   │   │   └── RigidBody2D
+        │   │   │   │
+        │   │   │   └── Area2D
+        │   │   │
+        │   │   ├── CollisionShape2D
+        │   │   ├── CollisionPolygon2D
+        │   │   ├── RayCast2D
+        │   │   ├── YSort
+        │   │   ├── Path2D
+        │   │   ├── PathFollow2D
+        │   │   ├── Particles2D
+        │   │   ├── CPUParticles2D
+        │   │   └── VisibilityNotifier2D
+        │   │
+        │   └── Control
+        │       ├── Label
+        │       ├── TextureRect
+        │       ├── ColorRect
+        │       ├── Panel
+        │       ├── Button
+        │       ├── TextureButton
+        │       ├── CheckBox
+        │       ├── CheckButton
+        │       ├── LineEdit
+        │       ├── TextEdit
+        │       ├── ProgressBar
+        │       ├── HSlider
+        │       ├── VSlider
+        │       ├── HBoxContainer
+        │       ├── VBoxContainer
+        │       ├── GridContainer
+        │       └── ...
+        │
+        ├── AudioStreamPlayer
+        ├── AudioStreamPlayer2D
+        ├── AudioStreamPlayer3D
+        │
+        └── ...

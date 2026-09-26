@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="Image" id=1]
+data = {
+"data": PoolByteArray( 255, 0, 0, 255 ),
+"format": 5,
+"height": 1,
+"mipmaps": false,
+"width": 1
+}
+
+[sub_resource type="ImageTexture" id=2]
+flags = 4
+image = SubResource( 1 )
+size = Vector2( 32, 32 )
+
+[node name="ViewportClippingTest" type="Node2D"]
+
+[node name="Viewport" type="Viewport" parent="."]
+size = Vector2( 200, 200 )
+transparent_bg = true
+
+[node name="SpriteInside" type="Sprite" parent="Viewport"]
+position = Vector2( 100, 100 )
+texture = SubResource( 2 )
+
+[node name="SpriteOutside" type="Sprite" parent="Viewport"]
+position = Vector2( 250, 250 )
+texture = SubResource( 2 )
